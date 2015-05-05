@@ -20,7 +20,7 @@ public class PP7_1
 	      
 
 	      System.out.println("Enter "+NUM+ " numbers: ");
-	      String line = scan.nextLine();
+	      int input = scan.nextInt();
 
 	      
 	      for (int index = 0; index < array.length; index++)
@@ -31,15 +31,12 @@ public class PP7_1
 	      }
 	      for (int current=0; current < array.length; current++)
 	      {
-	         System.out.print((current + 0));
-	         System.out.print(": " + array[current]);
+	         System.out.println((current + 0));
+	         System.out.println(": " + array[current]);
 	      }
 	      
 	      
-	      System.out.println ();
 	      
-	      System.out.println();
-	      //System.out.println("Numbers: " + other);
 		
 		
 
