@@ -1,4 +1,4 @@
-package pp7_4;
+	package pp7_4;
 
 import java.util.Scanner;
 

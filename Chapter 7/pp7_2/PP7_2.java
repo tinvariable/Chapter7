@@ -11,33 +11,41 @@ public class PP7_2
 
 	public static void main(String[] args) 
 	{
-		Scanner input = new Scanner(System.in);
+		int[] numbers = new int[51];
+		  inputArray(numbers);
 
-        ArrayList<Integer> array = new ArrayList<Integer>();
-        int count = 0;
+		  }
 
+		  public static void inputArray(int[] myList)
+		  {
+		    Scanner input = new Scanner(System.in);
+		    
+		      System.out.print("Enter integers from -25 - 25 (input 0 value to end inputs): ");
+		      int index = 0;
+		      for(int i = 0; i < myList.length - 1; i++)
+		      {
+		        if(i >= 0)
+		        {
+		          index = input.nextInt();  
+		          if (index > 0 && index < myList.length)
+		               myList[index-1]++;
+		          else
+		            break;  
+		        }
 
+		        if(myList[index-1] > 1)
+		        {
+		          System.out.println(index + " occurs " + myList[index-1] + " times ");
+		        }
+		        else
+		        {
+		          System.out.println(index + " occurs " + myList[index-1] + " time ");
+		        }
+		      } 
+		  }
 
-        while(true)
-        {
-            System.out.println("Please enter a number (enter a non-integer to end)");
-            try{
-                int x = input.nextInt();
-                array.add(x);
-                if (x>=0 && x<=50) {
-                    count++;
-                }
-            }
-            catch (InputMismatchException ex) {
-                break;
-            }
-        }
-
-        System.out.println();
-        System.out.format("The numbers you entered were: %s\n", array);
-        System.out.format("The count of in-range numbers was: %d\n", count);
 		
 
 	}
 
-}
+
