@@ -30,8 +30,11 @@ public class PP7_2
 		          if (index > 0 && index < myList.length)
 		               myList[index-1]++;
 		          else
-		            break;  
+				      index = input.nextInt();
+				      index =+ 25;
+				        
 		        }
+		      
 
 		        if(myList[index-1] > 1)
 		          System.out.println(index + " occurs " + myList[index-1] + " times ");
