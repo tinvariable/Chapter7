@@ -1,9 +1,4 @@
 package pp7_2;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.InputMismatchException;
-import java.util.Map;
 import java.util.Scanner;
 
 public class PP7_2 

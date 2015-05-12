@@ -2,57 +2,8 @@ package test;
 
 import java.util.Scanner;
 
-public class Test 
+public class Testrun 
 {
-	
-
-	private String accountNumber;
-	private String accountName;
-	private double balance;
-
-	// the methods
-
-	// the constructor
-	public Test(String numberIn, String nameIn)
-	{
-	accountNumber = numberIn;
-	accountName = nameIn;
-	balance = 0;
-	}
-
-	// methods to read the attributes
-	public String getAccountName()
-	{
-	return accountName;
-	}
-
-	public String getAccountNumber()
-	{
-	return accountNumber;
-	}
-
-	public double getBalance()
-	{
-	return balance;
-	}
-
-	// methods to deposit and withdraw money
-	public void deposit(double amountIn)
-	{
-	balance = balance + amountIn;
-	}
-	public boolean withdraw(double amountIn)
-	{
-	if(amountIn > balance)
-	{
-	return false;
-	}
-	else
-	{
-	balance = balance - amountIn;
-	return true;
-	}
-	}
 	public static void main(String[] args)
 	{
 	Test[] accountList = new Test[30];
@@ -101,9 +52,6 @@ public class Test
 	System.out.println("Please Enter the amount that you want to deposit or Type '0' to quit: ");
 	amount = sc.nextDouble();
 	accountList[i].deposit(amount);
-	System.out.println("Please Enter the amount that you want to withdraw or Type '0' to quit: ");
-	amount = sc.nextDouble();
-	accountList[i].withdraw(amount);
 	}
 	while (amount != 0);
 	System.out.println(accountList[i].getAccountNumber());
@@ -119,5 +67,3 @@ public class Test
 	}
 
 
-
-	

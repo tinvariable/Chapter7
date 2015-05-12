@@ -1,34 +1,30 @@
 package pp7_5;
-
-import java.text.DecimalFormat;
+import java.util.Random;
 import java.util.Scanner;
-
+import java.text.DecimalFormat;
 
 public class PP7_5 
 {
 
 	public static void main(String[] args) 
 	{
+		DecimalFormat fmt = new DecimalFormat("#0.000");
+	    Random rand = new Random();
+		final int MAX_COUNT = 50;
+		final int MAX = 100;
+		int count = rand.nextInt(MAX_COUNT) +1;
         Scanner scan = new Scanner(System.in);
         
-        int[] input = new int[51];
-        double mean = 0;
-        int numbers;
-        int i = 0;
+        int[] numbers = new int[MAX_COUNT];
         
-        System.out.println("Enter up to 50 integers enter a number out of bounds to stop: ");
- 
-        for(int index = 0; index <= 1; index++)
+               
+        for(int i = 0; i < count; i++)
         {
-        	if(scan.nextInt() >= 0)
-        	{
-        	i = scan.nextInt();
-        	}
-        	else
-        		break;
+        	numbers[i] = rand.nextInt(MAX) +1;
         }
-      
-        System.out.println(input[i]);
+        System.out.println("Count: " +count);
+        System.out.println("Mean: " + fmt.format(Driver.mean(numbers, count)));
+        System.out.println("Standard Deviation: " + fmt.format(Driver.standardDeviation(numbers, count)));
    }
 
 }
