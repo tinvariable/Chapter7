@@ -2,6 +2,8 @@ package pp7_10;
 
 import java.util.Scanner;
 
+import pp7_11.Question;
+
 public class Quiz 
 {
 	private final int MAX = 25;
@@ -29,7 +31,7 @@ public class Quiz
 		for(int i = 0; i < current; i++)
 		{
 			System.out.println(questions[i].getQuestion());
-			if(questions[i].answerCorrect(scan.nextLine))
+			if(questions[i].answerCorrect(scan.nextLine()))
 			{
 				correct++;
 			}
